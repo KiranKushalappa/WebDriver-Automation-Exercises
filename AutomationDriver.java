@@ -37,19 +37,19 @@ public class AutomationDriver {
 
 	public static void exercise1(WebDriver driver) throws InterruptedException 
 	{
-		//Selecting the “Radio1” radio button
+		//Selecting the â€œRadio1â€ radio button
 		driver.findElement(By.xpath("//input[@value='radio1']")).click();//1st radio button clicked
 		Thread.sleep(500);
 		System.out.println(driver.findElement(By.xpath("//input[@value='radio1']")).isSelected());//verifing whether radiobutton1 is selected or not
 		Assert.assertTrue(true);
 				
-		//Selecting the “Radio2” radio button
+		//Selecting the â€œRadio2â€ radio button
 		driver.findElement(By.xpath("//input[@value='radio2']")).click();//2nd radio button clicked
 		Thread.sleep(500);
 		System.out.println(driver.findElement(By.xpath("//input[@value='radio2']")).isSelected());//verifing whether radiobutton2 is selected or not
 		Assert.assertTrue(true);
 				
-		//Selecting the “Radio3” radio button
+		//Selecting the â€œRadio3â€ radio button
 		driver.findElement(By.xpath("//input[@value='radio3']")).click();//3rd radio button clicked
 		Thread.sleep(500);
 		System.out.println(driver.findElement(By.xpath("//input[@value='radio3']")).isSelected());//verifing whether radiobutton3 is selected or not
@@ -57,11 +57,11 @@ public class AutomationDriver {
 	}
 	public static void exercise2(WebDriver driver) throws InterruptedException
 	{
-		// Typing “United States” in the “Select Countries” input field in the “Suggestions Class” example.
+		// Typing â€œUnited Statesâ€ in the â€œSelect Countriesâ€ input field in the â€œSuggestions Classâ€ example.
 			driver.findElement(By.id("autocomplete")).sendKeys("United States");
 			Thread.sleep(2000L);
 			Actions a=new Actions(driver);
-			//Navigating to the “United States Minor Outlying Islands” item and clicking it. 
+			//Navigating to the â€œUnited States Minor Outlying Islandsâ€ item and clicking it. 
 			a.moveToElement(driver.findElement(By.xpath("//div[text()='United States Minor Outlying Islands']"))).build().perform();
 			Thread.sleep(1000L);
 			List<WebElement> options =driver.findElements(By.xpath("//li[@class='ui-menu-item']/div"));
@@ -79,61 +79,61 @@ public class AutomationDriver {
 	{
 		// Clicking the dropdown pane 
 		driver.findElement(By.id("dropdown-class-example")).click();
-		// Click on “Option1” 
+		// Click on â€œOption1â€ 
 		WebElement staticdropdown=driver.findElement(By.id("dropdown-class-example"));//object creation
 		Select dropdown=new Select(staticdropdown);
 		dropdown.selectByIndex(1);
 	    Thread.sleep(1000L);
-		//Verifing “Option1” is now the selected item in the dropdown pane
+		//Verifing â€œOption1â€ is now the selected item in the dropdown pane
 		System.out.println(dropdown.getFirstSelectedOption().getText());
 				
 				
-		dropdown.selectByIndex(2);//// Click on “Option2”
+		dropdown.selectByIndex(2);//// Click on â€œOption2â€
 	    Thread.sleep(1000L);
-		//Verify “Option2” is now the selected item in the dropdown pane
+		//Verify â€œOption2â€ is now the selected item in the dropdown pane
 		System.out.println(dropdown.getFirstSelectedOption().getText());
 				
-		dropdown.selectByIndex(3);// Click on “Option3”
+		dropdown.selectByIndex(3);// Click on â€œOption3â€
 		Thread.sleep(1000L);
-		//Verify “Option3” is now the selected item in the dropdown pane
+		//Verify â€œOption3â€ is now the selected item in the dropdown pane
 		System.out.println(dropdown.getFirstSelectedOption().getText());
 	}
 	public static void exercise4(WebDriver driver) throws InterruptedException
 	{
-		// Clicking the checkbox “Option1” in the “Checkbox Example” 
+		// Clicking the checkbox â€œOption1â€ in the â€œCheckbox Exampleâ€ 
 		driver.findElement(By.id("checkBoxOption1")).click();
 		Thread.sleep(1000L);
 		//verify option1  checked off.
 		System.out.println(	driver.findElement(By.id("checkBoxOption1")).isSelected());//it display the  check box1 is checked
 		Assert.assertTrue(driver.findElement(By.id("checkBoxOption1")).isSelected());//it verifies its true or false
 				
-		//Deselect “Option1” 
+		//Deselect â€œOption1â€ 
 		driver.findElement(By.id("checkBoxOption1")).click();
 		Thread.sleep(1000L);
 		//verify option1  is unchecked.
 		System.out.println(	driver.findElement(By.id("checkBoxOption1")).isSelected());//it display the  check box1 is unchecked
 				
-		// Clicking the checkbox “Option2” in the “Checkbox Example” 
+		// Clicking the checkbox â€œOption2â€ in the â€œCheckbox Exampleâ€ 
 		driver.findElement(By.id("checkBoxOption2")).click();
 		Thread.sleep(1000L);
 		//verify option1  checked off.
 		System.out.println(	driver.findElement(By.id("checkBoxOption2")).isSelected());//it display the  check box2 is checked
 		Assert.assertTrue(driver.findElement(By.id("checkBoxOption2")).isSelected());//it verifies its true or false
 						
-		//Deselect “Option2” 
+		//Deselect â€œOption2â€ 
 		driver.findElement(By.id("checkBoxOption2")).click();
 		Thread.sleep(1000L);
 		//verify option2  is unchecked.
 		System.out.println(	driver.findElement(By.id("checkBoxOption2")).isSelected());//it display the  check box2 is unchecked
 				
-		// Clicking the checkbox “Option3” in the “Checkbox Example” 
+		// Clicking the checkbox â€œOption3â€ in the â€œCheckbox Exampleâ€ 
 		driver.findElement(By.id("checkBoxOption3")).click();
 		Thread.sleep(1000L);
 		//verify option3  checked off.
 		System.out.println(	driver.findElement(By.id("checkBoxOption3")).isSelected());//it display the  check box3 is checked
 		Assert.assertTrue(driver.findElement(By.id("checkBoxOption3")).isSelected());//it verifies its true or false
 						
-		//Deselect “Option3” 
+		//Deselect â€œOption3â€ 
 		driver.findElement(By.id("checkBoxOption3")).click();
 		Thread.sleep(500L);
 		//verify option3  is unchecked.
@@ -170,8 +170,8 @@ public class AutomationDriver {
 	}
 	public static void exercise5(WebDriver driver) throws InterruptedException
 	{
-		// Clicking on the “Open Window” button 
-		// Clicking on the “Open Window” button 
+		// Clicking on the â€œOpen Windowâ€ button 
+		// Clicking on the â€œOpen Windowâ€ button 
 				driver.findElement(By.id("openwindow")).click();//parent to child
 				//logic to fetch the driver scope to child id/
 				Set<String> windows = driver.getWindowHandles(); //[parentid,childid]
@@ -191,7 +191,7 @@ public class AutomationDriver {
 	}
 	public static void exercise6(WebDriver driver) throws InterruptedException
 	{
-		//Clicking on the “Open Tab” button.
+		//Clicking on the â€œOpen Tabâ€ button.
 		driver.findElement(By.id("opentab")).click();
 		Set<String> window = driver.getWindowHandles(); //[parentid,childid,subchildId] it grab the id in the all window opened
 		Iterator<String>it = window.iterator();// access the ids
@@ -209,7 +209,7 @@ public class AutomationDriver {
 	{
 		//Entering the name in enter your name field
 		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
-		driver.findElement(By.id("name")).sendKeys("Kushalappa");
+		driver.findElement(By.id("name")).sendKeys("Kushal");
 		Thread.sleep(1000L);
 		driver.findElement(By.cssSelector("[id='alertbtn']")).click();//clicking on alert button
 		Thread.sleep(1000L);
@@ -219,7 +219,7 @@ public class AutomationDriver {
 	}
 	public static void exercise8(WebDriver driver) throws InterruptedException
 	{
-		//Scrolling down the page until the “Web Table” is visible.
+		//Scrolling down the page until the â€œWeb Tableâ€ is visible.
 		JavascriptExecutor js =(JavascriptExecutor)driver;//creating javascriptExecutor object to tell selinium to run java code
 		js.executeScript("window.scrollBy(0,600)");//movement of window
 		Thread.sleep(500);
